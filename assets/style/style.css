@@ -1,0 +1,17 @@
+/* global settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #ffffff;
+  --light: #f2f1f2;
+  --light-gray: #c0c0c0;
+  --dark-gray: #767776;
+  --dark: #101010;
+  --emphasis: #4ab393;
+}
+body {
+  background-color: var(--emphasis);
+}
