@@ -3,25 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List!</title>
+    <meta
+      name="description"
+      content="Crud To-Do List on GitHub. Project With HTML, CSS and JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="crud, to-do list, lista de tarefas, projeto básico javascript, to-do list github, crud git, crud front-end, back-end to-do list, task manager, database management, aplicativo de tarefas, html5, css3"
+    />
+    <title>Crud To-Do List</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Lista de Tarefas</h1>
+    <header class="header">
+      <h1>Crud To-Do List</h1>
+      <p>To-Do List With JavaScript!</p>
+    </header>
+    <main class="main container">
       <!--Campo de entrada para nova tarefa-->
-
-      <input type="text" id="taskInput" placeholder="Digite uma tarefa e aperte Enter">
-
-      <!--Lista de Tarefas-->
-      <ul id="taskList">
-        <li>
-          <input type="checkbox">
-          <span>Exemplo de Tarefa</span>
-          <span class="options"></span>
-        </li>
-      </ul>
-
-
-    </div>
+      <form class="form" action="./api/api.js" method="post">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Digite uma tarefa e aperte Enter"
+        />
+        <!--Lista de Tarefas-->
+        <ul class="taskList" id="taskList">
+          <li>
+            <input
+              type="checkbox"
+              id="checkBox"
+              class="checkBox"
+              name="checkBox"
+            />
+            <label for="checkBox">Exemplo de Tarefa</label>
+            <span class="options">...</span>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <!--Área do Modal-->
   </body>
 </html>
