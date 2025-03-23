@@ -9,10 +9,11 @@
   --light: #f2f1f2;
   --light-gray: #c0c0c0;
   --dark-gray: #767776;
+  --dark-light-gray: #b3b3b3;
   --dark: #101010;
   --emphasis: #4ab393;
   --orange: #ffa500;
-  --dark-orange: #90671a;
+  --dark-orange: #e59500;
 }
 body {
   background-color: var(--emphasis);
@@ -75,7 +76,7 @@ body {
 }
 
 .modal-container .modal-button .no:hover {
-  background-color: var(--dark-gray);
+  background-color: var(--dark-light-gray);
   transform: scale(1.1);
 }
 
