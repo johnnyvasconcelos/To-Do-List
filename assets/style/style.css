@@ -11,7 +11,72 @@
   --dark-gray: #767776;
   --dark: #101010;
   --emphasis: #4ab393;
+  --orange: #ffa500;
+  --dark-orange: #90671a;
 }
 body {
   background-color: var(--emphasis);
 }
+
+.modal-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--light-gray);
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-container .modal-message{
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.modal-container .modal-message .message{
+  margin-top: 0;
+}
+
+.modal-container .modal-button button{
+  padding: 10px;
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.modal-container .modal-button button:last-child{
+  margin-right: 0;
+}
+
+.modal-container .modal-button .yes{
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.modal-container .modal-button .yes:hover{
+  background-color: var(--dark-orange);
+  transform: scale(1.1);
+}
+
+.modal-container .modal-button .no:hover{
+  background-color: var(--dark-gray);
+  transform: scale(1.1);
+}
+
+
