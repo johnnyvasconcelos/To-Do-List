@@ -127,6 +127,7 @@ body {
   font-family: sans-serif;
   transition: 0.3s;
   z-index: 200;
+  cursor: pointer;
 }
 
 .btn-modal:hover {
