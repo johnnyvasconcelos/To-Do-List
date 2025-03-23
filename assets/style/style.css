@@ -18,7 +18,7 @@ body {
   background-color: var(--emphasis);
 }
 
-.modal-container{
+.modal-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,18 +34,18 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.modal-container .modal-message{
+.modal-container .modal-message {
   font-size: 2rem;
   font-weight: bold;
   color: var(--dark);
   margin-bottom: 10px;
 }
 
-.modal-container .modal-message .message{
+.modal-container .modal-message .message {
   margin-top: 0;
 }
 
-.modal-container .modal-button button{
+.modal-container .modal-button button {
   padding: 10px;
   width: 130px;
   height: 40px;
@@ -60,23 +60,81 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
-.modal-container .modal-button button:last-child{
+.modal-container .modal-button button:last-child {
   margin-right: 0;
 }
 
-.modal-container .modal-button .yes{
+.modal-container .modal-button .yes {
   background-color: var(--orange);
   color: var(--white);
 }
 
-.modal-container .modal-button .yes:hover{
+.modal-container .modal-button .yes:hover {
   background-color: var(--dark-orange);
   transform: scale(1.1);
 }
 
-.modal-container .modal-button .no:hover{
+.modal-container .modal-button .no:hover {
   background-color: var(--dark-gray);
   transform: scale(1.1);
 }
 
+.modal-background {
+  background: rgba(0, 0, 0, 0.36);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  transition: 0.1s all ease-in;
+  z-index: -1;
+  opacity: 0;
+}
 
+/* responsive settings */
+
+@media (max-width: 767px) {
+  .modal-container {
+    max-width: 90%;
+  }
+  .modal-container h2 {
+    font-size: 30px;
+  }
+  .modal-button {
+    display: flex;
+  }
+  .modal-container .modal-button button {
+    font-size: 0.8rem;
+  }
+}
+
+/* descartável */
+
+.btn-modal {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: #db2f5a;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.47);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  transition: 0.3s;
+  z-index: 200;
+}
+
+.btn-modal:hover {
+  background-color: #b51b42;
+  border: 4px solid rgba(255, 255, 255, 0.56);
+}
+
+.modal-background.show--modal {
+  opacity: 1;
+  z-index: 100;
+}

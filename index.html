@@ -12,7 +12,8 @@
       content="crud, to-do list, lista de tarefas, projeto básico javascript, to-do list github, crud git, crud front-end, back-end to-do list, task manager, database management, aplicativo de tarefas, html5, css3"
     />
     <title>Crud To-Do List</title>
-    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script src="./assets/scripts/modal.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -43,14 +44,22 @@
       </form>
     </main>
     <!--Área do Modal-->
-    <div class="modal-container">
-      <div class="modal-message">
-        <h2 class="message">Discard draft?</h2>
-      </div>
-      <div class="modal-button">
-        <button class="no">No</button>
-        <button class="yes">Yes, discard</button>
+    <div class="modal-background">
+      <div class="modal-container">
+        <div class="modal-message">
+          <h2 class="message">Discard draft?</h2>
+        </div>
+        <div class="modal-button">
+          <button class="no">No</button>
+          <button class="yes">Yes, discard</button>
+        </div>
       </div>
     </div>
+    <!-- descartável -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <div class="btn-modal"><i class="bx bx-list-plus"></i></div>
   </body>
 </html>
