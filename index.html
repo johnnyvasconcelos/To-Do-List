@@ -12,37 +12,137 @@
       content="crud, to-do list, lista de tarefas, projeto básico javascript, to-do list github, crud git, crud front-end, back-end to-do list, task manager, database management, aplicativo de tarefas, html5, css3"
     />
     <title>Crud To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/style.css" />
     <script src="./assets/scripts/modal.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <h1>Crud To-Do List</h1>
-      <p>To-Do List With JavaScript!</p>
+      <h1 class="header__title">Crud To-Do List</h1>
+      <h2 class="header__subtitle">To-Do List With JavaScript!</h2>
     </header>
-    <main class="main container">
+
+    <main class="main">
+      <div class="main__container">
       <!--Campo de entrada para nova tarefa-->
       <form class="form" action="./api/api.js" method="post">
+        <p class="main__title">Vamos começar conhecendo você:</p>
+        <label for="name">Digite seu nome:</label>
+        <input 
+          class="main__input"
+          type="text" id="name" 
+          placeholder="Digite seu nome">
+        <label for="age">Digite sua idade:</label>
+        <input 
+          class="main__input" 
+          type="number" 
+          name="age" 
+          id="age" 
+          placeholder="Digite sua idade">
+        <label for="text">Qual curso da Mate Academy você está inscrito:</label>
         <input
+          class="main__input"
           type="text"
           id="taskInput"
-          placeholder="Digite uma tarefa e aperte Enter"
+          placeholder="Digite qual o seu curso na Mate Academy"
         />
+        <input class="main__button" type="submit" value="Enviar">
+      </div>
+        <div class="tasks">
+        <p class="task__title">Marque conforme suas tarefas estão sendo completadas e adicione se necessário</p>
         <!--Lista de Tarefas-->
-        <ul class="taskList" id="taskList">
-          <li>
+        <ul class="task__list" id="taskList">
+          <li class="task__item">
             <input
               type="checkbox"
               id="checkBox"
               class="checkBox"
               name="checkBox"
             />
-            <label for="checkBox">Exemplo de Tarefa</label>
-            <span class="options">...</span>
+            <label for="checkBox">Ler a teoria</label>
+            <button>
+              <img src="./assets/style/icons/dots-horizontal-rounded-regular-24.png" alt="tres pontinhos">
+            </button>
           </li>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox"
+              class="checkBox"
+              name="checkBox"
+            />
+            <label for="checkBox">Assistir as aulas</label>
+            <button>
+              <img src="./assets/style/icons/dots-horizontal-rounded-regular-24.png" alt="tres pontinhos">
+            </button>
+          </li>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox"
+              class="checkBox"
+              name="checkBox"
+            />
+            <label for="checkBox">Fazer os exercícios práticos</label>
+            <button>
+              <img src="./assets/style/icons/dots-horizontal-rounded-regular-24.png" alt="tres pontinhos">
+            </button>
+          </li>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox"
+              class="checkBox"
+              name="checkBox"
+            />
+            <label for="checkBox">Tirar as dúvidas no chat ou no whatsapp</label>
+            <button>
+              <img src="./assets/style/icons/dots-horizontal-rounded-regular-24.png" alt="tres pontinhos">
+            </button>
+          </li>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox"
+              class="checkBox"
+              name="checkBox"
+            />
+            <label for="checkBox">Revisar as aulas anteriores</label>
+            <button>
+              <img src="./assets/style/icons/dots-horizontal-rounded-regular-24.png" alt="tres pontinhos">
+            </button>
+          </li>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox"
+              class="checkBox"
+              name="checkBox"
+            />
+            <label for="checkBox">Fazer exercícios extra</label>
+            <button>
+              <img src="./assets/style/icons/dots-horizontal-rounded-regular-24.png" alt="tres pontinhos">
+            </button>
+          </li>
+          <div>
+          <li class="task__item task__add">Adicionar uma tarefa</li>
+          <button class="task__button">
+            <img src="./assets/style/icons/plus-regular-24 (1).png" alt="simbolo de adiçao">
+          </button>
+        </div>
+        <div>
+          <li class="task__item task__item--grey">Criar um gráfico no FigJam</li>
+          <button class="task__button">
+            <img src="./assets/style/icons/plus-regular-24 (1).png" alt="simbolo de adiçao">
+          </button>
+        </div>
         </ul>
+      </div>
       </form>
     </main>
+
     <!--Área do Modal-->
     <div class="modal-background">
       <div class="modal-container">
