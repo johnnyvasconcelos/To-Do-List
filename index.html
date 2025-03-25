@@ -12,37 +12,109 @@
       content="crud, to-do list, lista de tarefas, projeto básico javascript, to-do list github, crud git, crud front-end, back-end to-do list, task manager, database management, aplicativo de tarefas, html5, css3"
     />
     <title>Crud To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/style.css" />
     <script src="./assets/scripts/modal.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <h1>Crud To-Do List</h1>
-      <p>To-Do List With JavaScript!</p>
+      <h1 class="header__title">Crud To-Do List</h1>
+      <h2 class="header__subtitle">To-Do List With JavaScript!</h2>
     </header>
-    <main class="main container">
+
+    <main class="main">
+      <div class="main__container">
       <!--Campo de entrada para nova tarefa-->
       <form class="form" action="./api/api.js" method="post">
-        <input
-          type="text"
-          id="taskInput"
-          placeholder="Digite uma tarefa e aperte Enter"
-        />
+             
+        <div class="tasks">
         <!--Lista de Tarefas-->
-        <ul class="taskList" id="taskList">
-          <li>
+        <ul class="task__list" id="taskList">
+          <li class="task__item">
             <input
               type="checkbox"
-              id="checkBox"
+              id="checkBox1"
               class="checkBox"
               name="checkBox"
             />
-            <label for="checkBox">Exemplo de Tarefa</label>
-            <span class="options">...</span>
+            <label class="task__list task-label" for="checkBox">Write HTML and styling for "MORE" menu bar</label>
+            <button class="delete-btn" onclick="deleteButton()">
+            <i class='bx bx-dots-horizontal-rounded'></i>
+          </button>
+          </li>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox2"
+              class="checkBox"
+              name="checkBox"
+            />
+            <label class="task__list task-label" for="checkBox">Make a landing page</label>
+            <button class="delete-btn" onclick="deleteButton()">
+              <i class='bx bx-dots-horizontal-rounded'></i>
+            </button>
+          </li>
+          <li class="task__item task-btn">
+            <button class="add-task-btn" onclick="addTaks()">
+                <i class='bx bx-plus'></i> Add a todo
+            </button>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox3"
+              class="checkBox"
+              name="checkBox"
+              checked
+            />
+            <label class="task__list task-check" for="checkBox">Replace showUI calls with pointers  <br>  to specific html files</label>
+            <button class="delete-btn" onclick="deleteButton()">
+              <i class='bx bx-dots-horizontal-rounded'></i>
+            </button>
+          </li>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox4"
+              class="checkBox"
+              name="checkBox"
+              checked
+              />
+              <label class="task__list task-check" for="checkBox">Make scope button switch based  <br>  on todo's scope state</label>
+              <button class="delete-btn" onclick="deleteButton()">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+              </button>
+          </li>
+          <li class="task__item">
+            <input
+              type="checkbox"
+              id="checkBox5"
+              class="checkBox"
+              name="checkBox"
+              checked
+            />
+            <label class="task__list task-check" for="checkBox">Write description</label>
+            <button class="delete-btn" onclick="deleteButton()">
+              <i class='bx bx-dots-horizontal-rounded'></i>
+            </button>
           </li>
         </ul>
+      </div>
+      <div class="footer">
+        <input
+        class="footer__input"
+        type="text"
+        id="footerInput"
+        placeholder="Make a FigJam graphic"
+      />
+      <button class="delete-btn-footer" onclick="deleteButton()">
+        <i class='bx bx-dots-horizontal-rounded'></i>
+      </button>
+      </div>
       </form>
     </main>
+
     <!--Área do Modal-->
     <div class="modal-background">
       <div class="modal-container">
