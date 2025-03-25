@@ -174,8 +174,8 @@ body {
   width: 300px;
 }
 
-.tasks .task-label { 
-  font-weight: 600;
+.tasks {
+  padding: 20px;
 }
 
 .delete-btn {
@@ -194,13 +194,24 @@ body {
 
 .task__list {
   list-style-type: none;
-  font-size: 14px;
-  padding: 20px;
+  font-size: 12px;
+
+}
+
+.tasks .task-label { 
+  font-weight: 600; 
 }
 
 .task__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 5px;
   position: relative;
+}
+
+.checkBox {
+  flex-shrink: 0;
 }
 
 .task-btn {
@@ -220,6 +231,7 @@ body {
 
 .footer__input {
   all: unset;
+  padding: 0;
 }
 
 input[type="checkbox"] {
