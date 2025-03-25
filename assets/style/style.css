@@ -11,7 +11,7 @@
   --dark-gray: #767776;
   --dark-light-gray: #b3b3b3;
   --dark: #101010;
-  --emphasis:rgb(191, 240, 213);
+  --emphasis:rgb(17, 167, 142);
   --orange: #ffa500;
   --dark-orange: #e59500;
 }
@@ -65,6 +65,7 @@ body {
   cursor: pointer;
   transition: 0.3s all ease-in-out;
 }
+
 
 .modal-container .modal-button button:last-child {
   margin-right: 0;
@@ -153,7 +154,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   margin: 20px auto 10px;
-  color:rgb(22, 15, 128);
+  color:var(--white);
 }
 
 .header__subtitle {
@@ -162,72 +163,73 @@ body {
   align-items: center;
   font-size: 20px;
   font-weight: 700;
-  color:rgb(37, 27, 181);
+  color:var(--white);
+  margin-botton: 20px;
 }
 
-.main__container {
-  margin-left: 10px;
+.main {
+  margin-top: 30px;
+  background-color: var(--white);
+  border-radius:6px; 
+  width: 300px;
 }
 
-.main__title {
-  font-size: 18px;
+.tasks .task-label { 
   font-weight: 600;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
-.main__input {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  padding: 6px;
-  font-size: 16px;
+.delete-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+}
+
+.add-task-btn {
+  all: unset;
+  cursor: pointer;
   margin-top: 8px;
-  margin-bottom: 10px;
-}
-
-.main__button {
-  background-color: rgb(50, 132, 209);
-  color:rgb(22, 15, 128));
-  padding: 8px 20px;
-  font-size: 18px;
-  margin: 10px 0;
-  border: 3px solid rgba(0, 0, 0, 0.36);
-  border-radius: 2px;
-  cursor: pointer; 
-}
-
-.tasks {
-  width: min-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 6px solid rgba(0, 0, 0, 0.36);
-  border-radius: 4px; 
-  width: min-content;
-}
-
-
-
-.task__title {
-  background-color:rgb(50, 132, 209);
-  font-size: 14px;
-  font-weight: 600;
-  padding:20px;
+  margin-bottom: 20px;
 }
 
 .task__list {
   list-style-type: none;
-  background-color:rgba(185, 172, 172, 0.47);
-  width: 535px;
   font-size: 14px;
-  padding: 10px;
-
+  padding: 20px;
 }
 
-img {
-  width: 10px;
-  height: 10px;
-  text-decoration: none;
+.task__item {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.task-btn {
+  font-family:  "Poppins", sans-serif;
+  color: var(--dark-gray);
+  font-weight: 800;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light);
+  padding: 15px;
+  margin: 0;
+  border-radius: 0 0 6px 6px;
+}
+
+.footer__input {
+  all: unset;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  accent-color: var(--emphasis);
+}
+
+.delete-btn-footer { 
+  all: unset;
   cursor: pointer;
 }
