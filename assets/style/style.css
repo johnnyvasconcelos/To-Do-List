@@ -1,4 +1,5 @@
 /* global settings */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,11 +18,20 @@
 }
 body {
   background-color: var(--emphasis);
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* modal */
 
 .modal-container {
   display: flex;
@@ -40,7 +50,7 @@ body {
 }
 
 .modal-container .modal-message {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--dark);
   margin-bottom: 10px;
@@ -59,7 +69,7 @@ body {
   border-radius: 5px;
   text-align: center;
   margin-right: 10px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
@@ -98,8 +108,10 @@ body {
 /* responsive settings */
 
 @media (max-width: 767px) {
-  .modal-container {
+  .modal-container,
+  .main {
     max-width: 90%;
+    margin: 0 auto;
   }
   .modal-container h2 {
     font-size: 30px;
@@ -109,6 +121,9 @@ body {
   }
   .modal-container .modal-button button {
     font-size: 0.8rem;
+  }
+  .modal-container .modal-message .message {
+    font-size: 0.9rem;
   }
 }
 
@@ -129,7 +144,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: sans-serif;
   transition: 0.3s;
   z-index: 200;
   cursor: pointer;
@@ -150,7 +164,7 @@ body {
   align-items: center;
   font-size: 30px;
   font-weight: 700;
-  margin: 20px auto 10px;
+  margin: 20px auto 5px;
   color: var(--white);
 }
 
@@ -162,13 +176,6 @@ body {
   font-weight: 500;
   color: var(--white);
   margin-botton: 20px;
-}
-
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .main {
@@ -216,6 +223,10 @@ body {
 .task-check {
   font-weight: 500;
   width: 70%;
+}
+
+.task-check {
+  text-decoration: line-through;
 }
 
 .task__item {
