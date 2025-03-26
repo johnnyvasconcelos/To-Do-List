@@ -278,3 +278,36 @@ input[type="checkbox"] {
   all: unset;
   cursor: pointer;
 }
+
+.info {
+  position: absolute;
+  top: 20px;
+  right: -70px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  width: 100px;
+  border: 1px solid var(--light-gray);
+  z-index: 100;
+  border-radius: 10px;
+}
+
+.info > span {
+  display: block;
+  padding: 10px;
+  text-transform: capitalize;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info > span:hover {
+  background-color: var(--emphasis);
+  color: var(--light);
+}
+.info > span:last-child {
+  border-top: 1px solid var(--light-gray);
+  border-radius: 0 0 10px 10px;
+}
