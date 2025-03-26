@@ -33,6 +33,8 @@
         <div class="tasks">
         <!--Lista de Tarefas-->
         <ul class="task__list" id="taskList">
+
+
           <li class="task__item">
             <input
               type="checkbox"
@@ -40,11 +42,47 @@
               class="checkBox"
               name="checkBox"
             />
+
             <label class="task__list task-label" for="checkBox">Write HTML and styling</label>
-            <div class="delete-btn" onclick="deleteButton()">
-            <i class='bx bx-dots-horizontal-rounded'></i>
-          </div>
+
+            <div class="delete-btn">
+              <i class='bx bx-dots-horizontal-rounded'></i>
+            </div>
+            
+            <ul class="dropdown-menu">
+              <li class="edit">
+                <i class="bx bx-edit"></i> Edit
+              </li>
+              <li class="remove">
+                <i class="bx bx-trash"></i> Remove
+              </li>
+            </ul>
           </li>
+
+          <li class="task__item">
+            <input 
+              type="checkbox" 
+              id="checkBox1"
+              class="checkBox" 
+              name="checkBox" 
+            />
+
+            <label class="task__list task-label" for="checkBox">Write HTML and styling</label>
+
+            <div class="delete-btn">
+              <i class='bx bx-dots-horizontal-rounded'></i>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li class="edit">
+                <i class="bx bx-edit"></i> Edit
+              </li>
+              <li class="remove">
+                <i class="bx bx-trash"></i> Remove
+              </li>
+            </ul>
+          </li>
+
           <li class="task__item">
             <input
               type="checkbox"
@@ -52,11 +90,23 @@
               class="checkBox"
               name="checkBox"
             />
+
             <label class="task__list task-label" for="checkBox">Make a landing page</label>
-            <div class="delete-btn" onclick="deleteButton()">
+
+            <div class="delete-btn">
               <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
+
+            <ul class="dropdown-menu">
+              <li class="edit">
+                <i class="bx bx-edit"></i> Edit
+              </li>
+              <li class="remove">
+                <i class="bx bx-trash"></i> Remove
+              </li>
+            </ul>
           </li>
+
           <li class="task__item task-btn">
             <div class="add-task-btn" onclick="addTaks()">
                 <i class='bx bx-plus'></i> Add a todo

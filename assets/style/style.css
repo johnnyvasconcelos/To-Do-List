@@ -175,7 +175,7 @@ body {
   font-size: 20px;
   font-weight: 500;
   color: var(--white);
-  margin-botton: 20px;
+  margin-bottom: 20px;
 }
 
 .main {
@@ -278,3 +278,41 @@ input[type="checkbox"] {
   all: unset;
   cursor: pointer;
 }
+
+/* #region Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: -25%;
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  list-style: none;
+  margin-top: 5px;
+  z-index: 100;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu i {
+  margin-right: 8px;
+}
+
+/* #endregion */
