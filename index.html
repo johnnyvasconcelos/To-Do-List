@@ -19,6 +19,7 @@
     <script src="./assets/scripts/modal.js" defer></script>
   </head>
   <body>
+    <div class="wrapper">
     <header class="header">
       <h1 class="header__title">Crud To-Do List</h1>
       <h2 class="header__subtitle">To-Do List With JavaScript!</h2>
@@ -39,7 +40,7 @@
               class="checkBox"
               name="checkBox"
             />
-            <label class="task__list task-label" for="checkBox">Write HTML and styling for "MORE" menu bar</label>
+            <label class="task__list task-label" for="checkBox">Write HTML and styling</label>
             <button class="delete-btn" onclick="deleteButton()">
             <i class='bx bx-dots-horizontal-rounded'></i>
           </button>
@@ -68,7 +69,7 @@
               name="checkBox"
               checked
             />
-            <label class="task__list task-check" for="checkBox">Replace showUI calls with pointers  <br>  to specific html files</label>
+            <label class="task__list task-check" for="checkBox">Replace showUI calls with pointers  to specific html files</label>
             <button class="delete-btn" onclick="deleteButton()">
               <i class='bx bx-dots-horizontal-rounded'></i>
             </button>
@@ -81,7 +82,7 @@
               name="checkBox"
               checked
               />
-              <label class="task__list task-check" for="checkBox">Make scope button switch based  <br>  on todo's scope state</label>
+              <label class="task__list task-check" for="checkBox">Make scope button switch based on todo's scope</label>
               <button class="delete-btn" onclick="deleteButton()">
                 <i class='bx bx-dots-horizontal-rounded'></i>
               </button>
@@ -109,12 +110,12 @@
         placeholder="Make a FigJam graphic"
       />
       <button class="delete-btn-footer" onclick="deleteButton()">
-        <i class='bx bx-dots-horizontal-rounded'></i>
+        <i class='bx bx-dots-horizontal-rounded more-info'></i>
       </button>
       </div>
       </form>
     </main>
-
+  </div>
     <!--Área do Modal-->
     <div class="modal-background">
       <div class="modal-container">
