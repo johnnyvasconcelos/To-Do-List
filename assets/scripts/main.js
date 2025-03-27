@@ -131,3 +131,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //#endregion
+
+
+const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+
+for (let i = 0; i < checkBoxes.length; i++) {
+  checkBoxes[i].addEventListener('click', function () {
+    checkLabel[i].classList.add('task-check');
+    if (checkBoxes[i].checked) {
+      checkLabel[i].classList.add('task-check');
+    } else {
+      checkLabel[i].classList.remove('task-check');
+    }
+  });
+}
+
+const checkLabel = document.querySelectorAll('label');
