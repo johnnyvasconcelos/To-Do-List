@@ -105,28 +105,6 @@ body {
   opacity: 0;
 }
 
-/* responsive settings */
-
-@media (max-width: 767px) {
-  .modal-container,
-  .main {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  .modal-container h2 {
-    font-size: 30px;
-  }
-  .modal-button {
-    display: flex;
-  }
-  .modal-container .modal-button button {
-    font-size: 0.8rem;
-  }
-  .modal-container .modal-message .message {
-    font-size: 0.9rem;
-  }
-}
-
 /* descartável */
 
 .btn-modal {
@@ -321,3 +299,28 @@ input[type="checkbox"] {
 }
 
 /* #endregion */
+
+/* responsive settings */
+
+@media (max-width: 767px) {
+  .modal-container,
+  .main {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .modal-container h2 {
+    font-size: 30px;
+  }
+  .modal-button {
+    display: flex;
+  }
+  .modal-container .modal-button button {
+    font-size: 0.8rem;
+  }
+  .modal-container .modal-message .message {
+    font-size: 0.9rem;
+  }
+  .dropdown-menu {
+    right: -10px;
+  }
+}
