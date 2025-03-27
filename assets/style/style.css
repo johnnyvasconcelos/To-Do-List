@@ -294,6 +294,11 @@ input[type="checkbox"] {
   z-index: 100;
 }
 
+.chat-dropdown {
+  top: 95%;
+  right: -15%;
+}
+
 .dropdown-menu.show {
   display: block;
 }
