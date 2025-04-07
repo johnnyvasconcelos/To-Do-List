@@ -110,6 +110,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       ////TODO: Adicionar logica AO clicar no CANCEL, aqui so ta um alert
       alert("Cancel Clicked");
+      
+      //Adicionado a logica para limpar o campo Input
+      let inputField = footer.querySelector("#footerInput")
+      if (inputField){
+        inputField.value = ""
+      }
 
       if (dropdownMenu) {
         dropdownMenu.classList.remove("show");
