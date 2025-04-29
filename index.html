@@ -33,10 +33,10 @@
       <main class="main">
         <div class="main__container">
           <!--Campo de entrada para nova tarefa-->
-          <form class="form" action="./api/api.js" method="post">
+          <form class="form" method="get">
             <div class="tasks">
               <!--Lista de Tarefas-->
-              <ul class="task__list" id="taskList">
+              <ul class="task__list task__list--unprepared" id="taskList">
                 <li class="task__item">
                   <input
                     type="checkbox"
@@ -74,13 +74,13 @@
                     <li class="remove"><i class="bx bx-trash"></i> Remove</li>
                   </ul>
                 </li>
-
-                <li class="task__item task-btn">
-                  <div class="add-task-btn">
-                    <i class="bx bx-plus"></i> Add a todo
-                  </div>
-                </li>
-
+              </ul>
+              <div class="task__item task-btn">
+                <div class="add-task-btn">
+                  <i class="bx bx-plus"></i> Add a todo
+                </div>
+              </div>
+              <ul class="task__list task__list--prepared" id="taskList-2">
                 <li class="task__item">
                   <input
                     type="checkbox"
