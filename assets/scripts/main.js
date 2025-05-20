@@ -30,9 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
       item.addEventListener("click", function () {
         let taskItem = this.closest(".task__item");
         let dropdownMenu = taskItem.querySelector(".dropdown-menu");
-
-        ////TODO: Adicionar logica AO clicar no EDIT, aqui so ta um alert
-        alert("Edit clicked");
+        //TODO: Adicionar logica AO clicar no EDIT, aqui so ta um alert
+        const textArea = document.querySelector("#footerInput");
+        const taskContent = taskItem.textContent;
+        textArea.value = taskContent.trim();
+        textArea.classList.add("task-edit");
         if (dropdownMenu) dropdownMenu.classList.remove("show");
       });
     });
