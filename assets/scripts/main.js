@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.stopPropagation();
         let taskItem = this.closest(".task__item");
         let dropdownMenu = taskItem.querySelector(".dropdown-menu");
-        // Fecha qualquer outro dropdown aberto, pra nao ter 2 drropdowns
+        // Fecha qualquer outro dropdown aberto, pra nao ter 2 dropdowns
         document.querySelectorAll(".dropdown-menu.show").forEach((menu) => {
           if (menu !== dropdownMenu) {
             menu.classList.remove("show");
@@ -30,10 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
       item.addEventListener("click", function () {
         let taskItem = this.closest(".task__item");
         let dropdownMenu = taskItem.querySelector(".dropdown-menu");
-        //TODO: Adicionar logica AO clicar no EDIT, aqui so ta um alert
+        //TODO: Adicionar logica AO clicar no EDIT
         const textArea = document.querySelector("#footerInput");
         const taskContent = taskItem.textContent;
-        textArea.value = taskContent.trim();
+        textArea.value = taskContent
+          .trim()
+          .replace(/\s*(Edit|Remove)\s*(Edit|Remove)?\s*$/g, "");
         textArea.classList.add("task-edit");
         if (dropdownMenu) dropdownMenu.classList.remove("show");
       });
@@ -63,11 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-
   function load() {
     const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
     checkBoxes.forEach((checkbox) => {
-      checkbox.replaceWith(checkbox.cloneNode(true)); // remove listeners antigos
+      checkbox.replaceWith(checkbox.cloneNode(true)); // limpa listeners antigos
     });
 
     const refreshedCheckBoxes = document.querySelectorAll(
@@ -80,6 +81,21 @@ document.addEventListener("DOMContentLoaded", function () {
         if (label) {
           label.classList.toggle("task-check", checkbox.checked);
         }
+
+        const item = checkbox.closest(".task__item");
+        const unpreparedList = document.getElementById("taskList");
+        const preparedList = document.getElementById("taskList-2");
+        const toList = checkbox.checked ? preparedList : unpreparedList;
+
+        item.classList.add("fade-out");
+
+        setTimeout(() => {
+          item.classList.remove("fade-out");
+          toList.appendChild(item);
+          void item.offsetWidth;
+          item.classList.add("fade-in");
+          setTimeout(() => item.classList.remove("fade-in"), 300);
+        }, 300);
       });
     });
   }
@@ -181,4 +197,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   load();
   initDropdownEvents();
+});
+
+document.querySelector(".add-task-btn").addEventListener("click", () => {
+  document.querySelector(".footer__input").focus();
 });
